@@ -72,7 +72,7 @@ class Router{
         }
         return $uri;
     }
-    
+
     /**
      * Returns prepared route for parsing
      *
