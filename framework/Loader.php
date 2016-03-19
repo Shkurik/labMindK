@@ -49,13 +49,13 @@ class Loader {
     /**
      * @param $className
      */
-    public static function load ( $className )
-    {
+    public static function load ( $className ){
         $segments = explode("\\", $className);
         $pathDirectory = self::$namespace[$segments[0].'\\'];
         for( $i = 1; $i < count($segments) - 1; $i++ ) {
             $pathDirectory = $pathDirectory.'/'.$segments[$i];
         }
+
         $fileName = '/'.$segments[count($segments) - 1].'.php';
         if(is_dir($pathDirectory)) {
             $filePath = $pathDirectory.$fileName;
