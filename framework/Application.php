@@ -27,9 +27,9 @@ class Application {
         if( file_exists( $path )) {
             Service::set('config', include($path));
             Service::set('routes', Service::get('config')['routes']);
-            Service::set('security', new Security());
+            /*Service::set('security', new Security());
             Service::set('session', new Session());
-            Service::set('request', new Request());
+            Service::set('request', new Request());*/
             $pdoFromConfig = Service::get('config')['pdo'];
             $db = new \PDO( $pdoFromConfig['dns'], $pdoFromConfig['user'], $pdoFromConfig['password']);
             Service::set('db', $db);
