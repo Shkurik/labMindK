@@ -14,7 +14,7 @@ class Renderer {
      * @var string
      */
     protected $mainTemplate;
-    
+
     /**
      * Renderer constructor.
      * Fills main template
