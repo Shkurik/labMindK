@@ -17,7 +17,7 @@ class Request {
     public function getMethod() {
         return $_SERVER['REQUEST_METHOD'];
     }
-    
+
     /**
      * Checks is method came as POST or not
      *
